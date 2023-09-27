@@ -1,8 +1,8 @@
 exports.capabilities = {
 	name: 'HThanh',
 	'LT:Options': {
-		username: 'thanh14147',
-		accessKey: 'frUExdL35ZmIDKPrVHxsAKaiSwQjZpHD2TqJyWkXWASLQF38x7',
+		username: '<your-username>',
+		accessKey: '<your-access-key>',
 		project: 'Demo Selenium with JS',
 		headless: false,
 		w3c: false,
