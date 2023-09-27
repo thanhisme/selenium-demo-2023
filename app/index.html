@@ -51,8 +51,8 @@
 				if (!(year > 0)) {
 					setMsg('Please enter a valid year');
 				} else if (new Date(year, 1, 29).getDate() === 29) {
-					// setMsg(`${year} is a leap year`);
-					setMsg(`${year} is a leap year (wrong)`);
+					setMsg(`${year} is a leap year`);
+					// setMsg(`${year} is a leap year (wrong)`);
 				} else {
 					setMsg(`${year} is not a leap year`);
 				}

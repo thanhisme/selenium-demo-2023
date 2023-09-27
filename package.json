@@ -22,7 +22,7 @@
 		]
 	},
 	"scripts": {
-		"test": "mocha --parallel",
+		"test:parallel": "mocha --parallel ./test/example2.spec.js ./test/example3.spec.js",
 		"test:example1": "node ./test/example1.spec.js",
 		"test:example2": "mocha ./test/example2.spec.js",
 		"test:example3": "mocha ./test/example3.spec.js",
