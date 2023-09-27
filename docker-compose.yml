@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  selenium-hub:
+    image: selenium/hub
+    ports:
+      - 4442:4442
+      - 4443:4443
+      - 4444:4444
+
+  chrome:
+    image: selenium/node-chrome:dev
+    shm_size: 2gb
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    depends_on:
+      - selenium-hub
+
+  firefox:
+    image: selenium/node-firefox:dev
+    shm_size: 2gb
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+    depends_on:
+      - selenium-hub
+
+  app:
+    image: nginx:1.24.0-alpine
+    volumes:
+      - ./app:/usr/share/nginx/html
+    ports:
+      - 8080:80
+
+  reporter:
+    image: nginx:1.24.0-alpine
+    volumes:
+      - ./test-report:/usr/share/nginx/html
+    ports:
+      - 80:80

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simulating Selenium Testing</title>
+		<style>
+			.main {
+				margin: 10px;
+			}
+
+			input,
+			button {
+				padding: 5px;
+			}
+
+			button:hover {
+				cursor: pointer;
+			}
+
+			#msg {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<h3>Check is leap year</h3>
+			<input
+				type="text"
+				placeholder="Enter a year:"
+				class="p-3"
+				id="year-input"
+			/>
+			<button id="check-btn">Check</button>
+			<p id="msg"></p>
+		</div>
+
+		<script>
+			const yearInput = document.querySelector('#year-input');
+			const msgTag = document.querySelector('#msg');
+			const checkBtn = document.querySelector('#check-btn');
+
+			yearInput.addEventListener('input', () => {
+				setMsg('');
+			});
+
+			checkBtn.addEventListener('click', function () {
+				const year = Number.parseInt(yearInput.value.trim());
+
+				if (!(year > 0)) {
+					setMsg('Please enter a valid year');
+				} else if (new Date(year, 1, 29).getDate() === 29) {
+					// setMsg(`${year} is a leap year`);
+					setMsg(`${year} is a leap year (wrong)`);
+				} else {
+					setMsg(`${year} is not a leap year`);
+				}
+			});
+
+			function setMsg(message) {
+				msgTag.textContent = message;
+			}
+		</script>
+	</body>
+</html>
