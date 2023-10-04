@@ -1,0 +1,212 @@
+{
+  "id": "0bee0dfa-cba8-4208-bfa9-e6882c4d457a",
+  "version": "2.0",
+  "name": "demo-selenium-ide",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "17d43e35-4811-434d-a705-9466f634d877",
+    "name": "case 1: valid leap year",
+    "commands": [{
+      "id": "a2c313a1-14df-4918-93b5-5870e93c1ce0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e8289d18-4ebd-486b-a4cd-965cb4b9c330",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "805x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a6ddfe9a-9ef5-4d69-bae6-eb409641e2f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=year-input",
+      "targets": [
+        ["id=year-input", "id"],
+        ["css=#year-input", "css:finder"],
+        ["xpath=//input[@id='year-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12131b53-757a-4ecb-a173-71ae851ba97c",
+      "comment": "",
+      "command": "type",
+      "target": "id=year-input",
+      "targets": [
+        ["id=year-input", "id"],
+        ["css=#year-input", "css:finder"],
+        ["xpath=//input[@id='year-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2020"
+    }, {
+      "id": "d7d875f3-0840-44ba-9025-5521952b40b4",
+      "comment": "",
+      "command": "click",
+      "target": "id=check-btn",
+      "targets": [
+        ["id=check-btn", "id"],
+        ["css=#check-btn", "css:finder"],
+        ["xpath=//button[@id='check-btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bf200ba-1e41-4844-bb14-b9542e6f0bc1",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=msg",
+      "targets": [
+        ["id=msg", "id"],
+        ["css=#msg", "css:finder"],
+        ["xpath=//p[@id='msg']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'2020 is a leap year')]", "xpath:innerText"]
+      ],
+      "value": "2020 is a leap year"
+    }, {
+      "id": "2af30419-fc75-4e42-a185-eecb67f94427",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d0aa0869-f2df-4541-973b-2a4b524751c3",
+    "name": "case 2: not a leap year",
+    "commands": [{
+      "id": "e7aa9197-7c28-497d-8d6b-7207f85ccf68",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb0b0bc2-5d33-4c68-8e3e-a4ec84af7efa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "805x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52c01146-5695-4ad5-a7df-3f67a1c1d0ba",
+      "comment": "",
+      "command": "click",
+      "target": "id=year-input",
+      "targets": [
+        ["id=year-input", "id"],
+        ["css=#year-input", "css:finder"],
+        ["xpath=//input[@id='year-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bd025fe-03a0-4348-9566-0d873568f244",
+      "comment": "",
+      "command": "type",
+      "target": "id=year-input",
+      "targets": [
+        ["id=year-input", "id"],
+        ["css=#year-input", "css:finder"],
+        ["xpath=//input[@id='year-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2100"
+    }, {
+      "id": "e2ed28a2-d949-4ff6-878c-ca062877480d",
+      "comment": "",
+      "command": "click",
+      "target": "id=check-btn",
+      "targets": [
+        ["id=check-btn", "id"],
+        ["css=#check-btn", "css:finder"],
+        ["xpath=//button[@id='check-btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b10e1b26-a2b4-4efe-8798-ba5bcee14b04",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=msg",
+      "targets": [
+        ["id=msg", "id"],
+        ["css=#msg", "css:finder"],
+        ["xpath=//p[@id='msg']", "xpath:attributes"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'2100 is not a leap year')]", "xpath:innerText"]
+      ],
+      "value": "2100 is not a leap year"
+    }, {
+      "id": "c59599ab-23a3-4ead-8b65-b6ef556eee4a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a8a40d7c-8066-4492-a84e-6741f2373dd3",
+    "name": "case 3: invalid year",
+    "commands": [{
+      "id": "1678c819-eed4-40fe-b5a8-9f878ed5823a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3e05fd6-6467-4f60-b1cf-7dc834b3f82d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "805x697",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d637c05-a2be-458b-a226-75673a795a26",
+      "comment": "",
+      "command": "click",
+      "target": "id=check-btn",
+      "targets": [
+        ["id=check-btn", "id"],
+        ["css=#check-btn", "css:finder"],
+        ["xpath=//button[@id='check-btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Check')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca538ea7-dfdb-4471-b4de-96e4491af4ab",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=msg",
+      "targets": [],
+      "value": "Please enter a valid year"
+    }, {
+      "id": "350f8bef-46d9-42cd-8a41-da54be5395f3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "623e5b06-e5d5-4c2b-9d9d-ada4c7594531",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["17d43e35-4811-434d-a705-9466f634d877"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
