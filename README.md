@@ -12,7 +12,7 @@
 
 1. Before jumping into examples, you need to run `docker compose up -d app reporter`.
 2. Access [localhost:8080](http://localhost:8080) to visit the sample app
-3. Access [localhost:8080](http://localhost:80) to visit the reporter after testing (the first time, you won't see anything since we have no test results).
+3. Access [localhost:80](http://localhost:80) to visit the reporter after testing (the first time, you won't see anything since we have no test results).
 
 ### Example 1:
 
